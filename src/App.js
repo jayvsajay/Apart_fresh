@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+
 import './App.css';
+// import Simpleform from './components/Simpleform';
+// import Youtubeform from './components/Youtubeform';
+// import FormContainer from './components/FormContainer';
+// import LoginForm from './components/LoginForm';
+// import RegistrationForm from './components/RegistrationForm';
+// import { theme, ThemeProvider } from '@chakra-ui/core'
+import { BrowserRouter as Router ,Routes,Route } from 'react-router-dom';
+import EnrollmentForm from './components/EnrollmentForm';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Simpleform/> */}
+      {/* <Youtubeform/> */}
+      {/* <FormContainer/> */}
+      {/* <LoginForm />
+      <RegistrationForm/> */}
+      <Router>
+        <Routes>
+          <Route path='/' element={<EnrollmentForm/>}/>
+        </Routes>
+      </Router>
+      <EnrollmentForm/>
+      {/* <ThemeProvider theme={theme}>
+        <LoginForm/>
+      </ThemeProvider> */}
+
     </div>
   );
 }
